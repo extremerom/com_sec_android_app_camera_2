@@ -321,6 +321,30 @@
     return p0
     :cond_pro_check_18
 
+    sget-object v0, Lx1/c;->SUPPORT_CAMERA_ASSISTANT_ANAMORPHIC_LENS:Lx1/c;
+    if-ne p0, v0, :cond_pro_check_19
+    const/4 p0, 0x1
+    return p0
+    :cond_pro_check_19
+
+    sget-object v0, Lx1/c;->SUPPORT_CAMERA_ASSISTANT_DOF_ADAPTER:Lx1/c;
+    if-ne p0, v0, :cond_pro_check_20
+    const/4 p0, 0x1
+    return p0
+    :cond_pro_check_20
+
+    sget-object v0, Lx1/c;->SUPPORT_CAMERA_ASSISTANT_DIGITAL_ZOOM_UPSCALE:Lx1/c;
+    if-ne p0, v0, :cond_pro_check_21
+    const/4 p0, 0x1
+    return p0
+    :cond_pro_check_21
+
+    sget-object v0, Lx1/c;->SUPPORT_VIDEO_HIGH_BITRATE:Lx1/c;
+    if-ne p0, v0, :cond_pro_check_22
+    const/4 p0, 0x1
+    return p0
+    :cond_pro_check_22
+
     # Original code path for non-PRO features
     # invoke-static {}, Ll4/f;->l()Ll4/f;
     # move-result-object v0
